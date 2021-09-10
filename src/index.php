@@ -1,9 +1,8 @@
 <?php
 
-use App\Repository\CustomerRepository;
-use App\Service\ImportCustomers;
-use App\Service\Reader\MultiReader;
-use App\Service\Reader\ReaderFactory;
+use App\Application\ImportCustomers;
+use App\Infrastructure\Reader\MultiReader;
+use App\Infrastructure\Reader\ReaderFactory;
 
 require __DIR__ . "/../vendor/autoload.php";
 
@@ -12,6 +11,6 @@ $readers = array_map(
     explode(",", $argv[1])
 );
 $reader = new MultiReader($readers);
-$importCustomers = new ImportCustomers($reader, new CustomerRepository());
+$importCustomers = new ImportCustomers($reader);
 $customers = $importCustomers();
 var_dump($customers);

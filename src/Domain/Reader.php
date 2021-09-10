@@ -1,8 +1,6 @@
 <?php
 
-namespace App\Service\Reader;
-
-use App\Model\Customer;
+namespace App\Domain;
 
 interface Reader
 {

@@ -2,9 +2,10 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Reader;
+namespace App\Infrastructure\Reader;
 
-use App\Model\Customer;
+use App\Domain\Customer;
+use App\Domain\Reader;
 
 class MultiReader implements Reader
 {

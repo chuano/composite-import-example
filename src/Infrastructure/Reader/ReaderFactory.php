@@ -2,8 +2,9 @@
 
 declare(strict_types=1);
 
-namespace App\Service\Reader;
+namespace App\Infrastructure\Reader;
 
+use App\Domain\Reader;
 use Exception;
 
 class ReaderFactory
